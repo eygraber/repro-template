@@ -1,0 +1,45 @@
+[versions]
+android-cacheFix-plugin = "2.4.6"
+
+android-plugin = "7.2.0-beta04"
+
+android-sdk-compile = "31"
+android-sdk-min = "24"
+android-sdk-target = "31"
+
+detekt = "main-SNAPSHOT"
+detektEygraber = "1.0.11"
+
+jdk = "17"
+
+kotlin = "1.6.20"
+
+kotlinx-coroutines = "1.6.1"
+
+versionPlugin = "0.42.0"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android-plugin" }
+android-cacheFix = { id = "org.gradle.android.cache-fix", version.ref = "android-cacheFix-plugin"}
+android-library = { id = "com.android.library", version.ref = "android-plugin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin"}
+versionsBenManes = { id = "com.github.ben-manes.versions", version.ref = "versionPlugin" }
+
+[libraries]
+android-desugar = "com.android.tools:desugar_jdk_libs:1.1.5"
+
+buildscript-android = { module = "com.android.tools.build:gradle", version.ref = "android-plugin" }
+buildscript-androidCacheFix = { module = "gradle.plugin.org.gradle.android:android-cache-fix-gradle-plugin", version.ref = "android-cacheFix-plugin" }
+buildscript-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+buildscript-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+detekt = { module = "io.gitlab.arturbosch.detekt:detekt-formatting", version.ref = "detekt" }
+detektEygraber-formatting = { module = "com.eygraber.detekt.rules:formatting", version.ref = "detektEygraber" }
+detektEygraber-style = { module = "com.eygraber.detekt.rules:style", version.ref = "detektEygraber" }
+
+google-play-core = "com.google.android.play:core:1.10.3"
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1"
