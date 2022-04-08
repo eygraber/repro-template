@@ -36,8 +36,6 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 detekt {
-  toolVersion = libs.versions.detekt.get()
-
   source.from("build.gradle.kts")
 
   autoCorrect = true

@@ -7,9 +7,6 @@ import com.google.android.play.core.splitcompat.SplitCompat
 class ReproApp : Application() {
   override fun attachBaseContext(base: Context) {
     super.attachBaseContext(base)
-    val isDebuggable = BuildConfig.DEBUG
-    if(isDebuggable) {
-      SplitCompat.install(this)
-    }
+    SplitCompat.install(this)
   }
 }

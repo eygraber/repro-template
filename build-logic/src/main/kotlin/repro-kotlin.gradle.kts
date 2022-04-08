@@ -5,6 +5,7 @@ val libs = the<LibrariesForLibs>()
 
 plugins {
   id("kotlin-android")
+  id("repro-detekt")
 }
 
 kotlin {
@@ -22,7 +23,7 @@ tasks.withType<KotlinCompile>().configureEach {
     allWarningsAsErrors = true
 
     freeCompilerArgs = freeCompilerArgs + listOf(
-      "-Xopt-in=kotlin.RequiresOptIn"
+      "-opt-in=kotlin.RequiresOptIn"
     )
   }
 }
