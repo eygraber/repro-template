@@ -8,5 +8,6 @@ class ReproApp : Application() {
   override fun attachBaseContext(base: Context) {
     super.attachBaseContext(base)
     SplitCompat.install(this)
+    CanBeNotNullFalsePositive(null).bind()
   }
 }
